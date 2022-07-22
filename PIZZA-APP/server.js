@@ -5,6 +5,10 @@ const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 const PORT = process.env.PORT || 2022
 
+//Assets
+
+app.use(express.static('public'))
+
 
 // routes
 

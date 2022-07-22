@@ -6,9 +6,9 @@
         -Dev Dependencies
             -nodemon
 [+] create Express server - Create a Server.js file.
-[.] Git setup and first commit.
-[.] install Laravel Mix
+[+] Git setup and first commit.
+[+] install Laravel Mix
     -setup js and css
-[.] install tailwind css
+[+] install tailwind css
 [.]create homepage using Html and Css
     - include tailwind css
