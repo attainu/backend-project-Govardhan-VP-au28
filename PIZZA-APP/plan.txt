@@ -1,0 +1,14 @@
+[+] create directory.
+[+] create  npm project and install all dependencies 
+        -Dependencies 
+            -express server
+            -ejs express-ejs-layouts
+        -Dev Dependencies
+            -nodemon
+[+] create Express server - Create a Server.js file.
+[.] Git setup and first commit.
+[.] install Laravel Mix
+    -setup js and css
+[.] install tailwind css
+[.]create homepage using Html and Css
+    - include tailwind css

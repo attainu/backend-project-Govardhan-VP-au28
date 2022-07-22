@@ -1,0 +1,1 @@
+here we are storing schema  information- models view controllers (mvc) pattern

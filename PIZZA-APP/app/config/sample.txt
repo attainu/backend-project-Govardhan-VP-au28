@@ -1,0 +1,1 @@
+here we are storing configuration information like authentication system configuration.
