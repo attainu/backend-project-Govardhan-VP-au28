@@ -1,0 +1,39 @@
+@import './variable';
+body {
+    font-family: 'lato', serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+    height: 4000px;
+}
+
+nav li :last-child a {
+    background: $primary;
+    &:hover {
+        background-color: $primary-hover;
+    }
+}
+
+nav li a {
+    &:hover {
+        color: $primary;
+    }
+}
+
+section.hero {
+    background: $secondary;
+}
+
+.size {
+    background-color: $secondary;
+}
+
+.add-to-cart {
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
