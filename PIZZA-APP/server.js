@@ -10,17 +10,31 @@ const PORT = process.env.PORT || 2022
 app.use(express.static('public'))
 
 
-// routes
 
-app.get('/', (req, res) => {
-    res.render('home');
-})
 
 // set templates
 app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'));
 app.set('view engine', 'ejs');
 
+
+// routes
+
+app.get('/', (req, res) => {
+    res.render('home');
+})
+
+app.get('/cart', (req, res) => {
+    res.render('customers/cart');
+})
+
+app.get('/login', (req, res) => {
+    res.render('auth/login');
+})
+
+app.get('/register', (req, res) => {
+    res.render('auth/register');
+})
 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
