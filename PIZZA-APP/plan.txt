@@ -10,5 +10,28 @@
 [+] install Laravel Mix
     -setup js and css
 [+] install tailwind css
-[.]create homepage using Html and Css
+[+]create homepage using Html and Css
     - include tailwind css
+[+] create Cart Page
+        -order summary section
+        -empty cart section
+[+]move routes to routes files
+[+]create dedicated controllers
+[+]add cart functionality
+    [+]fetch all pizzas from db and show on home page
+    [+]create menu model and put dummy data 
+        -connect mongo db
+        -use connect-mongo for session store
+            -dependencies
+                -mongoose,express-session, connect-mongo,dotenv 
+    -axios to send ajax request
+    -install notification library npm i noty  https://ned.im/noty/#/
+[+]Create login Page with routes
+[+]Build register crud
+    -dependencies express-flash express-session dotenv
+[+]Build login using Passport
+    -install dependencies passport passport-local express-session
+[.]create order controller and link it in server.js
+[.]create Orders view with table for customer and admin
+
+

@@ -1,16 +1,74 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
+const ejsLint = require('ejs-lint');
 const path = require('path');
 const expressLayout = require('express-ejs-layouts');
+const session = require('express-session');
+const flash = require('express-flash');
+const MongoDbStore = require('connect-mongo');
+const passport = require('passport');
+
 const PORT = process.env.PORT || 2022
+
+const mongoose = require('mongoose');
+
+var bodyParser = require('body-parser');
+const { application } = require('express');
+require('body-parser-zlib')(bodyParser);
+
+// database connection
+
+async function initMongoDB() {
+    await mongoose.connect(process.env.MONGO_URL, (err) => {
+        if (err) {
+            console.log('mongodb Database Connection Failed')
+        } else {
+            console.log('mongodb Database Connection successfully established')
+        }
+    })
+}
+initMongoDB()
+
+
+
+
+//session-config--
+app.use(session({
+    secret: process.env.Cookies_secret,
+    resave: false,
+    store: MongoDbStore.create({
+        mongoUrl: process.env.MONGO_URL,
+    }),
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 } //i.e. 24hrs..
+
+    // cookie: { maxAge: 1000 * 15 } //i.e. 15sec
+}));
+
+// Passport Config
+const passportInit = require('./app/config/passport');
+passportInit(passport);
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use(flash()); //middleware
+
 
 //Assets
 
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
 
-
-
+//Global middlewares
+app.use((req, res, next) => {
+    res.locals.session = req.session
+    res.locals.user = req.user
+    next()
+})
 
 // set templates
 app.use(expressLayout)
@@ -20,21 +78,9 @@ app.set('view engine', 'ejs');
 
 // routes
 
-app.get('/', (req, res) => {
-    res.render('home');
-})
+require('./routes/web')(app);
 
-app.get('/cart', (req, res) => {
-    res.render('customers/cart');
-})
 
-app.get('/login', (req, res) => {
-    res.render('auth/login');
-})
-
-app.get('/register', (req, res) => {
-    res.render('auth/register');
-})
 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);

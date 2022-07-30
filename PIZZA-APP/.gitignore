@@ -5,3 +5,10 @@ node_modules
 mix-manifest.json
 tailwind.config.js
 webpack.mix.js
+
+mongodb=mongodb+srv://Govu07:rCN6ngK3JGyDoG6Z@cluster01.rshj3.mongodb.net/?retryWrites=true&w=majority
+
+password=rCN6ngK3JGyDoG6Z
+
+
+
