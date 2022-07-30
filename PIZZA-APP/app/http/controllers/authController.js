@@ -81,6 +81,8 @@ function authController() {
             req.logout()
             return res.redirect('/login')
         }
+
+
     }
 }
 
