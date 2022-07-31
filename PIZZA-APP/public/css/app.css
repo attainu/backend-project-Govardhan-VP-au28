@@ -296,11 +296,11 @@ nav li a:hover {
 }
 
 section.hero {
-  background: #FFB6C1;
+  background: #e9d6cd;
 }
 
 .size {
-  background: #FFB6C1;
+  background: #e9d6cd;
 }
 
 .add-to-cart {
@@ -326,14 +326,14 @@ section.hero {
 }
 
 section.cart {
-  background: #FFB6C1;
+  background: #e9d6cd;
 }
 section.cart .amount {
   color: #FE5F1E;
 }
 
 section.login {
-  background: #FFB6C1;
+  background: #e9d6cd;
   min-height: calc(100vh - 86px);
 }
 section.login a {
@@ -353,7 +353,7 @@ a.link {
 }
 
 section.status {
-  background: #FFB6C1;
+  background: #e9d6cd;
   min-height: calc(100vh - 86px);
 }
 
@@ -380,7 +380,7 @@ section.status {
   height: 10px;
   border-radius: 50%;
   transform: translateY(-50%);
-  box-shadow: 0 0 1px 10px #FFB6C1;
+  box-shadow: 0 0 1px 10px #e9d6cd;
 }
 
 .status-box ul li span:before {
@@ -430,7 +430,7 @@ section.status {
 }
 
 .status-box ul li:nth-child(5) span:after {
-  box-shadow: 0 20px 1px 20px #FFB6C1;
+  box-shadow: 0 20px 1px 20px #e9d6cd;
 }
 
 .status-box ul li.step-completed:before {
