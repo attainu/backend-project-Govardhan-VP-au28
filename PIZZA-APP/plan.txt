@@ -37,9 +37,11 @@
 [+]show all my orders on customers orders page
 [+] show orders on admin orders page
 [+] create orders for single page with status
-[.]order tracker
-    -dependencies moment
-[.]
+[+]order tracker
+    [+]Socket connection
+        -dependencies moment socket.io
+[.]Build project for deployment
+[.]Deploy project on live server
 
 
 

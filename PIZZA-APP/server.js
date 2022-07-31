@@ -12,7 +12,7 @@ const MongoDbStore = require('connect-mongo');
 const passport = require('passport');
 const Emitter = require('events');
 
-const PORT = process.env.PORT || 2022
+const PORT = process.env.PORT || 2005
 
 const mongoose = require('mongoose');
 
@@ -83,7 +83,9 @@ app.set('view engine', 'ejs');
 
 require('./routes/web')(app);
 
-
+app.use((req, res) => {
+    require.status(404).render('errors/404')
+})
 
 const server = app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
