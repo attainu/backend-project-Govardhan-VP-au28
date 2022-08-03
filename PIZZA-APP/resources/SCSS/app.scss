@@ -5,6 +5,7 @@ body {
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
+    background: $fake;
 }
 
 nav li:last-child a {
@@ -23,6 +24,10 @@ nav li a {
 
 section.hero {
     background: $secondary;
+}
+
+section.menu {
+    background: $fake;
 }
 
 .size {
@@ -49,6 +54,14 @@ section.hero {
     &:hover {
         background: $primary-hover;
     }
+}
+
+.login-form {
+    border-radius: 40px;
+}
+
+.register-form {
+    border-radius: 40px;
 }
 
 section.cart {

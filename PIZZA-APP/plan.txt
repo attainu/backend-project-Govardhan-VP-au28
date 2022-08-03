@@ -40,8 +40,8 @@
 [+]order tracker
     [+]Socket connection
         -dependencies moment socket.io
-[.]Build project for deployment
-[.]Deploy project on live server
+[+]Build project for deployment
+[+]Deploy project on live server
 
 
 
